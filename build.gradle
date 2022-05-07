@@ -8,6 +8,10 @@ group = 'edu.vanderbilt.asgn'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11'
 
+springBoot {
+    mainClass = 'org.magnum.dataup.Application'
+}
+
 repositories {
     mavenCentral()
     flatDir {
@@ -32,9 +36,12 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    compile("org.springframework.boot:spring-boot-starter-jdbc")
 
     runtimeOnly 'com.h2database:h2'
     runtimeOnly 'junit:junit:4.12'
+    testImplementation 'junit:junit:4.12'
+    implementation 'junit:junit:4.12'
 }
 
 test {

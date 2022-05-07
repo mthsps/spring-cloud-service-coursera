@@ -63,10 +63,12 @@ import org.magnum.dataup.model.Video;
 import org.magnum.dataup.model.VideoStatus;
 import org.magnum.dataup.model.VideoStatus.VideoState;
 
+import org.springframework.boot.test.context.SpringBootTest;
 import retrofit.RestAdapter;
 import retrofit.RetrofitError;
 import retrofit.client.Response;
 import retrofit.mime.TypedFile;
+
 
 public class AutoGradingTest {
 
@@ -145,8 +147,7 @@ public class AutoGradingTest {
 	@Test
 	public void testAddVideoData() throws Exception {
 		Video received = videoSvc.addVideo(video);
-		VideoStatus status = videoSvc.setVideoData(received.getId(),
-				new TypedFile(received.getContentType(), testVideoData));
+		VideoStatus status = videoSvc.setVideoData(received.getId(), new TypedFile(received.getContentType(), testVideoData));
 		assertEquals(VideoState.READY, status.getState());
 		
 		Response response = videoSvc.getData(received.getId());

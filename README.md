@@ -6,6 +6,7 @@ Course from the Vanderbilt University on "how to build cloud services via the us
 
 I really enjoyed this course, even though it took many hours to fix all the configuration issues (dependencies, Java version, Gradle version, and so on) to actually make the assignments work. It builds every aspect from the ground up, showing how technologies have evolved to make programming tasks easier. For example, at the beginning it shows how we would build a simple RESTApi using just Java Servlets and HTTP, to later show how the Spring framework facilitates this by handling all the repetitive work (eg converting and parsing the data). It details the functions of annotations, such as @Controller, @RequestParam, @PathVariable and @ResponseBody.
 
+The second part of the course is much more theoretical, but no less interesting. It shows how Spring can work together with cloud services (specifically with AWS). In addition, it addresses many issues that go through this, such as scalability and load balancing. I found it very informative to see the different approaches that can be used to work with Stateless or Stateful applications. Finally, it demonstrates how Spring can also be connected to NoSQL databases and how to deal with the problem of possible redundancies that can arise.
 
 ### Assignment 1 
 
@@ -19,7 +20,3 @@ I really enjoyed this course, even though it took many hours to fix all the conf
 ## References
 
 [Coursera - Building Cloud Services with the Java Spring Framework](https://www.coursera.org/learn/cloud-services-java-spring-framework/)
-
-[Assignment 1 - GitHub Repository](https://github.com/juleswhite/mobile-cloud-asgn1)
-
-[Assignment 2 - GitHub Repository](https://github.com/juleswhite/mobile-cloud-asgn2)
